@@ -10,7 +10,7 @@ A full-stack web application that helps students track, analyze, and optimize th
 | Backend    | Python FastAPI                      |
 | Database   | SQLite (via SQLAlchemy)             |
 | ML Model   | scikit-learn Random Forest          |
-| Auth       | JWT (python-jose + passlib/bcrypt)  |
+| Auth       | JWT (python-jose + PBKDF2 hashing)  |
 
 ---
 
@@ -89,7 +89,29 @@ Swagger UI: **http://localhost:8000/docs**
   - `days_until_exam` — Days remaining to exam
   - `subject_difficulty` — Perceived difficulty (1–5)
 - **Output:** Readiness Score (0–100)
-- **Training:** 2000 synthetic student records
+- **Training:** 20000 synthetic student records
+
+---
+
+## ☁️ Deployment
+
+### Frontend
+- GitHub Pages: https://saikumarreddyappidi.github.io/smartstudy/
+
+### Backend
+- Render blueprint file: [render.yaml](render.yaml)
+- Render start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+
+### Render setup
+1. Open Render dashboard
+2. Create a new Web Service from this GitHub repository
+3. Render will detect [render.yaml](render.yaml)
+4. Deploy the service named `smartstudy-api-saikumarreddyappidi`
+5. After deploy, backend URL will be:
+  - `https://smartstudy-api-saikumarreddyappidi.onrender.com`
+
+### Important note
+- Current backend storage uses SQLite. On hosted platforms, SQLite may be ephemeral unless a persistent disk or external database is configured.
 
 ---
 

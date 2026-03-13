@@ -35,9 +35,21 @@ if not os.path.exists("study_model.pkl"):
 
 app = FastAPI(title="Smart Study Habit Analyzer API", version="1.0.0")
 
+
+def get_allowed_origins():
+    origins_from_env = os.getenv("CORS_ORIGINS")
+    if origins_from_env:
+        return [origin.strip() for origin in origins_from_env.split(",") if origin.strip()]
+    return [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "https://saikumarreddyappidi.github.io",
+        "https://saikumarreddyappidi.github.io/smartstudy",
+    ]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=get_allowed_origins(),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
