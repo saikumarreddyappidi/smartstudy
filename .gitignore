@@ -1,0 +1,32 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Backend artifacts
+backend/study_analyzer.db
+backend/study_model.pkl
+backend/__pycache__/
+
+# Node / React
+frontend/node_modules/
+frontend/build/
+frontend/.cache/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Environment files
+.env
+.env.*
