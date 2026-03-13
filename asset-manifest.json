@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/smartstudy/static/css/main.d1d6e326.css",
-    "main.js": "/smartstudy/static/js/main.2a37105c.js",
+    "main.js": "/smartstudy/static/js/main.1d782bfa.js",
     "index.html": "/smartstudy/index.html",
     "main.d1d6e326.css.map": "/smartstudy/static/css/main.d1d6e326.css.map",
-    "main.2a37105c.js.map": "/smartstudy/static/js/main.2a37105c.js.map"
+    "main.1d782bfa.js.map": "/smartstudy/static/js/main.1d782bfa.js.map"
   },
   "entrypoints": [
     "static/css/main.d1d6e326.css",
-    "static/js/main.2a37105c.js"
+    "static/js/main.1d782bfa.js"
   ]
 }
